@@ -12,7 +12,6 @@ class CategoryController extends Controller
     	return view('admin.category.list',compact('cate'));
     	
     }
-
     public function displayCreateForm()
     {
     	return view('admin.category.add');	

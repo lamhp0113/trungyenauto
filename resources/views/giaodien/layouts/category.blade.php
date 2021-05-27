@@ -25,36 +25,18 @@
        <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown"><a class="nav-link " href="index.html">Trang chủ</a>
        </li>
-        <li class="nav-item dropdown"><a class="nav-link" href="about.html">Giới thiệu</a>
-         <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
-           <a class="dropdown-item" href="#">Về chúng tôi</a>
-            <div class="dropdown-divider"></div>
-           <a class="dropdown-item" href="#">Báo chí nói về Trung Yên</a>
-           <div class="dropdown-divider"></div>
-           <a class="dropdown-item" href="#">Sự kiện Trung Yên</a>
-           <div class="dropdown-divider"></div>
-           <a class="dropdown-item" href="#">Thư viện hình ảnh</a>
-             <div class="dropdown-divider"></div>
-           <a class="dropdown-item" href="#">Thư viện video</a>
-         </div>
+        <li class="nav-item dropdown"><a class="nav-link" href="/about">Giới thiệu</a>
+      
        </li>
        <li class="nav-item dropdown"><a href="services.html" class="nav-link">Dịch vụ</a>
         <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
-           <a class="dropdown-item" href="#">Sửa chữa</a>
+          @foreach($cate as $ca)
+           <a class="dropdown-item" style="hov" href="#">{{$ca->name}}</a>
             <div class="dropdown-divider"></div>
-           <a class="dropdown-item" href="#">Chăm sóc</a>
-           <div class="dropdown-divider"></div>
-           <a class="dropdown-item" href="#">Đống sơn</a>
+          @endforeach
          </div>
        </li>
        <li class="nav-item dropdown"><a href="project.html" class="nav-link">Sản phẩm </a>
-         <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
-           <a class="dropdown-item" href="#">Webvison</a>
-            <div class="dropdown-divider"></div>
-           <a class="dropdown-item" href="#">Cảm biến áp xuất lốp</a>
-           <div class="dropdown-divider"></div>
-           <a class="dropdown-item" href="#">Thảm lốt sàn</a>
-         </div>
        </li>
        <li class="nav-item dropdown"><a href="blog.html" class="nav-link">Khuyến mại</a>
         <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
@@ -65,16 +47,8 @@
            <a class="dropdown-item" href="#">Tư vấn xe</a>
          </div>
        </li>
-       <li class="nav-item dropdown"><a href="contact.html" class="nav-link">Liên hệ</a>
-            <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
-           <a class="dropdown-item" href="#">Tuyển dụng</a>
-            <div class="dropdown-divider"></div>
-           <a class="dropdown-item" href="#">Đào tạo</a>
-           <div class="dropdown-divider"></div>
-           <a class="dropdown-item" href="#">Hợp tác đối tác</a>
-           <div class="dropdown-divider"></div>
-           <a class="dropdown-item" href="#">Liên hệ chúng tôi</a>
-         </div>
+       <li class="nav-item dropdown"><a href="/contact" class="nav-link">Liên hệ</a>
+      
        </li>
      </ul>
    </div>
