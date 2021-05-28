@@ -36,7 +36,6 @@
                                     <br>(Hoặc : Ngõ 2 - Số 45 Trung Kính- Trung Hòa- Cầu Giấy- Hà Nội)
                                 </span>
                                 <br/>
-
                             </li>
                             <li><a href="#"><span class="icon fa fa-phone"></span><span
                                         class="text">0982191087</span></a></li>

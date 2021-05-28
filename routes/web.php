@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
-
+use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::get('admin', function () {
     return view('admin.index');
 });
+
 Route::get('category',[CategoryController::class,'list']);
 Route::get('category/create',[CategoryController::class,'displayCreateForm']);
 Route::post('category/create',[CategoryController::class,'doCreate']);
@@ -29,4 +30,7 @@ Route::get('category/{id}',[CategoryController::class,'displayUpdateForm']);
 Route::put('category/{id}',[CategoryController::class,'doUpdate']);
 Route::delete('category/{id}',[CategoryController::class,'doDelete']);
 
-
+Route::resource("booking",BookingController::class);
+//Route::get('booking',[BookingController::class,'list']);
+//Route::get('booking/{id}',[BookingController::class,'displayUpdateForm']);
+//Route::put('booking/{id}',[BookingController::class,'doUpdate']);

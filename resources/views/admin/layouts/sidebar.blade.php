@@ -45,18 +45,15 @@
                 <i class="nav-icon fas fa-book"></i>
                 <p>
                   Danh mục
-              
+
                 </p>
               </a>
-          
+
             </li>
              <li class="nav-item">
-              <a href="/admin" class="nav-link">
+              <a href="/booking" class="nav-link">
                 <i class="nav-icon fas fa-book"></i>
-                <p>
-                  Đặt hàng
-                 
-                </p>
+                <p> Lịch đặt sửa chữa </p>
               </a>
             </li>
 

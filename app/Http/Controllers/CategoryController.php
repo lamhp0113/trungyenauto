@@ -10,12 +10,11 @@ class CategoryController extends Controller
     {
     	$cate=Category::all();
     	return view('admin.category.list',compact('cate'));
-    	
     }
 
     public function displayCreateForm()
     {
-    	return view('admin.category.add');	
+    	return view('admin.category.add');
     }
 
     public function doCreate(Request $request)
@@ -30,7 +29,7 @@ class CategoryController extends Controller
     public function displayUpdateForm($id)
     {
         $cate=Category::find($id);
-        return view('admin.category.update',compact('cate'));  
+        return view('admin.category.update',compact('cate'));
     }
 
     public function doUpdate(Request $request, Category $cate)

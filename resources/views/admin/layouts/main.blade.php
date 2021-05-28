@@ -12,8 +12,8 @@
   <div class="wrapper">
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
       <ul class="navbar-nav ml-auto">
-    
-  
+
+
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#">
             <i class="far fa-comments"></i>
@@ -72,13 +72,13 @@
           </div>
         </li>
         <!-- Notifications Dropdown Menu -->
-     
+
         <li class="nav-item">
           <a class="nav-link" data-widget="fullscreen" href="#" role="button">
             <i class="fas fa-expand-arrows-alt"></i>
           </a>
         </li>
-    
+
       </ul>
     </nav>
     <!-- /.navbar -->
@@ -88,17 +88,6 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <div class="content-header">
-        <div class="container-fluid">
-          <div class="row mb-2">
-            <div class="col-sm-6">
-              <h1 class="m-0">Danh mục</h1>
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-      </div>
-      <!-- /.content-header -->
 
       <!-- Main content -->
   <section class="content">
