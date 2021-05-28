@@ -11,7 +11,6 @@ class CategoryController extends Controller
     	$cate=Category::all();
     	return view('admin.category.list',compact('cate'));
     }
-
     public function displayCreateForm()
     {
     	return view('admin.category.add');

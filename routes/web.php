@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +17,12 @@ use App\Http\Controllers\BookingController;
 |
 */
 
-Route::get('/', function () {
-    return view('giaodien.home');
+Route::get('/',[HomeController::class,'home']);
+Route::get('contact', function () {
+    return view('giaodien.contact');
+});
+Route::get('about', function () {
+    return view('giaodien.about');
 });
 
 Route::get('admin', function () {
