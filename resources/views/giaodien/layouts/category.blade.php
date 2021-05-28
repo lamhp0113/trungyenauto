@@ -23,10 +23,10 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
        <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown"><a class="nav-link " href="index.html">Trang chủ</a>
+        <li class="nav-item dropdown"><a class="nav-link " href="/">Trang chủ</a>
        </li>
         <li class="nav-item dropdown"><a class="nav-link" href="/about">Giới thiệu</a>
-      
+
        </li>
        <li class="nav-item dropdown"><a href="services.html" class="nav-link">Dịch vụ</a>
         <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
@@ -48,7 +48,7 @@
          </div>
        </li>
        <li class="nav-item dropdown"><a href="/contact" class="nav-link">Liên hệ</a>
-      
+
        </li>
      </ul>
    </div>

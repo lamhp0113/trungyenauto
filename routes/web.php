@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ServicesController;
 
 
 /*
@@ -18,17 +19,12 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/',[HomeController::class,'home']);
-Route::get('contact', function () {
-    return view('giaodien.contact');
-});
-Route::get('about', function () {
-    return view('giaodien.about');
-});
+Route::get('contact',[HomeController::class,'contact']);
+Route::get('about',[HomeController::class,'about']);
 
 Route::get('admin', function () {
     return view('admin.index');
 });
-
 Route::get('category',[CategoryController::class,'list']);
 Route::get('category/create',[CategoryController::class,'displayCreateForm']);
 Route::post('category/create',[CategoryController::class,'doCreate']);
@@ -36,7 +32,7 @@ Route::get('category/{id}',[CategoryController::class,'displayUpdateForm']);
 Route::put('category/{id}',[CategoryController::class,'doUpdate']);
 Route::delete('category/{id}',[CategoryController::class,'doDelete']);
 
-Route::resource("booking",BookingController::class);
-//Route::get('booking',[BookingController::class,'list']);
-//Route::get('booking/{id}',[BookingController::class,'displayUpdateForm']);
-//Route::put('booking/{id}',[BookingController::class,'doUpdate']);
+Route::resource('booking',BookingController::class);
+Route::resource('services',ServicesController::class);
+
+
