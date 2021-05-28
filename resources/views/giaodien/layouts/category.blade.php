@@ -27,8 +27,10 @@
                 <li class="nav-item dropdown"><a href="services.html" class="nav-link">Dịch vụ</a>
                     <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
                         @foreach($cate as $ca)
-                            <a class="dropdown-item" style="hov" href="#">{{$ca->name}}</a>
-                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">{{$ca->name}}</a>
+                            @if(!($loop->last))
+                                <div class="dropdown-divider"></div>
+                            @endif
                         @endforeach
                     </div>
                 </li>
