@@ -33,6 +33,13 @@ Route::put('category/{id}',[CategoryController::class,'doUpdate']);
 Route::delete('category/{id}',[CategoryController::class,'doDelete']);
 
 Route::resource('booking',BookingController::class);
-Route::resource('services',ServicesController::class);
+/*Route::resource('services',ServicesController::class);*/
 
 
+Route::get('services',[ServicesController::class,'index']);
+Route::get('services/create',[ServicesController::class,'create']);
+Route::post('services/create',[ServicesController::class,'store']);
+Route::get('update-services/{id}',[ServicesController::class,'displayUpdateForm']);
+Route::post('update-services/{id}',[ServicesController::class,'doUpdate']);
+Route::get('services/{id}',[ServicesController::class,'getXoa']);
+// tin tuc

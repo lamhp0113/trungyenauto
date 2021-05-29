@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Services extends Model
 {
-    use HasFactory;
 
     protected $table = 'services';
     public $timestamps = true;
@@ -17,6 +16,8 @@ class Services extends Model
         'long_description',
         'booking_time',
         'price',
+        'images',
+
 
     ];
 }

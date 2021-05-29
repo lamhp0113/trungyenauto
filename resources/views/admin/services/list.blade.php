@@ -1,42 +1,45 @@
-@extends('admin.layouts.main')
-@section('content')
+ @extends('admin.layouts.main')
+ @section('content')
+ 			<!-- /.box-header -->
+ 			<div class="box-body table-responsive no-padding">
+ 				<table class="table table-hover">
+ 					<tbody>
+ 						<tr>
+ 							<th>ID</th>
+ 							<th>Tiêu đề</th>
+ 							<th>Mô tả</th>
+ 							<th>Nội dung</th>
+ 							<th>Gia</th>
+ 							<th>Hình ảnh</th>
+ 						
+ 						
+ 							<th>
+ 								<a href="services/create" class="btn btn-sm btn-success">Thêm mới</a>
+ 								
+ 							</th>
+ 						</tr>
+ 						
+ 						@foreach($services as $dv)
+ 						<tr>
+ 							<td>{{$dv->id}}</td>
+ 							<td>{{$dv->name}}</td>
+ 							<td>{{$dv->short_description}}</td>
+ 							<td>{{$dv->	long_description}}</td>
+ 							<td>{{$dv->price}}</td>
 
-    <div class="box-body table-responsive no-padding">
-        <table class="table table-hover">
-            <tbody>
-            <tr>
-                <th>ID</th>
-                <th>Tên danh mục</th>
-                <th>Thứ tự</th>
-                <th>
-                    <a href="category/create" class="btn btn-sm btn-success">Thêm mới</a>
-                </th>
-            </tr>
-
-                <tr>
-                    <td></td>
-                    <td> </td>
-                    <td></td>
-                    <td>
-
-                        <form action="" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <a href=""><i class="fas fa-edit fa-lg text-danger"></i></a>
-                            <button type="submit"  onclick="return confirm('Bạn có chắc chắc muốn xóa không?.')" title="delete" style="border: none; background-color:transparent;">
-                                <i class="fas fa-trash fa-lg text-danger"></i>
-                            </button>
-                        </form>
-                    </td>
-                </tr>
-
-
-
-            <tr>
-                <td colspan="5" class="text-center"></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-@endsection
+ 							<td><img src="{{$dv->images}}" width="50px" height="50px" alt=""></td>
+ 							
+ 							<td>
+ 								<a href="update-services/{{$dv->id}}" class="btn btn-sm btn-info">Edit</a>
+ 								<a href="services/{{$dv->id}}" onclick="return confirm('Bạn có chắc chắc muốn xóa không?.')" class="btn btn-sm btn-danger">Remove</a>
+ 							</td>
+ 						</tr>
+ 						@endforeach
+ 						
+ 					
+ 					</tbody>
+ 		</table>
+ 		  {!! $services->links('pagination::bootstrap-4') !!}
+</div>
+ 
+ @endsection

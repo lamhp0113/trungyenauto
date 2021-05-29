@@ -18,14 +18,14 @@
         <td>{{$ct->name}} </td>
         <td>{{$ct->priority}}</td>
         <td>
-         
+
          <form action="category/{{$ct->id}}" method="POST">
           @csrf
           @method('DELETE')
           <a href="category/{{$ct->id}}"><i class="fas fa-edit fa-lg text-danger"></i></a>
           <button type="submit"  onclick="return confirm('Bạn có chắc chắc muốn xóa không?.')" title="delete" style="border: none; background-color:transparent;">
             <i class="fas fa-trash fa-lg text-danger"></i>
-          </button>            
+          </button>
         </form>
       </td>
     </tr>
