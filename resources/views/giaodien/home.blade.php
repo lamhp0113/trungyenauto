@@ -18,7 +18,7 @@
                         <div class="text w-100">
                             <h2>We are best car repair services</h2>
                             <h1 class="mb-4">Make your car last longer</h1>
-                            <p><a href="#" class="btn btn-primary">Book an appointment</a></p>
+                            <p><a href="#" class="btn btn-primary">Đặt lịch ngay</a></p>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <div class="text w-100">
                             <h2>We care about your car</h2>
                             <h1 class="mb-4">It's time to come to repair your car</h1>
-                            <p><a href="#" class="btn btn-primary">Book an appointment</a></p>
+                            <p><a href="#" class="btn btn-primary">Đặt lịch ngay</a></p>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                         <a href="#"><h3 class="heading">Bão dưỡng ô tô định kỳ</h3></a>
                         <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
                             unorthographic.</p>
-                        <p><a href="#" class="btn-custom">Read more</a></p>
+                        <p><a href="#" class="btn-custom">Đọc thêm</a></p>
                     </div>
                 </div>
                 <div class="d-block d-flex">
@@ -77,7 +77,7 @@
                         <a href="#"><h3 class="heading">Đại tu động cơ ô tô</h3></a>
                         <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
                             unorthographic.</p>
-                        <p><a href="#" class="btn-custom">Read more</a></p>
+                        <p><a href="#" class="btn-custom">Đọc thêm</a></p>
                     </div>
                 </div>
 
@@ -91,7 +91,7 @@
                         <a href="#"><h3 class="heading">Bão dưỡng ô tô định kỳ</h3></a>
                         <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
                             unorthographic.</p>
-                        <p><a href="#" class="btn-custom">Read more</a></p>
+                        <p><a href="#" class="btn-custom">Đọc thêm</a></p>
                     </div>
                 </div>
                 <div class="d-block d-flex">
@@ -102,7 +102,7 @@
                         <a href="#"><h3 class="heading">Bão dưỡng ô tô định kỳ</h3></a>
                         <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
                             unorthographic.</p>
-                        <p><a href="#" class="btn-custom">Read more</a></p>
+                        <p><a href="#" class="btn-custom">Đọc thêm</a></p>
                     </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                         <a href="#"><h3 class="heading">Bão dưỡng ô tô định kỳ</h3></a>
                         <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
                             unorthographic.</p>
-                        <p><a href="#" class="btn-custom">Read more</a></p>
+                        <p><a href="#" class="btn-custom">Đọc thêm</a></p>
                     </div>
                 </div>
                 <div class="d-block d-flex">
@@ -127,7 +127,7 @@
                         <a href="#"><h3 class="heading">Bão dưỡng ô tô định kỳ</h3></a>
                         <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
                             unorthographic.</p>
-                        <p><a href="#" class="btn-custom">Read more</a></p>
+                        <p><a href="#" class="btn-custom">Đọc thêm</a></p>
                     </div>
                 </div>
             </div>
