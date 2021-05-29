@@ -14,7 +14,7 @@
         letter-spacing: 1px;
         position: relative;
         ">
-            <a style="color: white;" href="#"><span
+            <a style="color: white;" href="#datlich"><span
                     style="display: inline-block;padding: 16px 20px;">Đặt Lịch</span></a>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">

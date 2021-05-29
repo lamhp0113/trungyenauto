@@ -5,7 +5,7 @@
                 <div class="full">
                     <div class="center-desk">
                         <div class="logo">
-                            <img style="max-width: 100%;" src="/images/logo.jpg" alt="Trung Yên Auto | Trung Yên Garage"
+                            <img style="max-width: 100%;" src=" {{ asset('/images/logo.jpg') }}" alt="Trung Yên Auto | Trung Yên Garage"
                                  itemprop="logo"/>
                         </div>
                     </div>

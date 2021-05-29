@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +37,5 @@ Route::put('category/{id}',[CategoryController::class,'doUpdate']);
 Route::delete('category/{id}',[CategoryController::class,'doDelete']);
 
 Route::resource("booking",BookingController::class);
-//Route::get('booking',[BookingController::class,'list']);
-//Route::get('booking/{id}',[BookingController::class,'displayUpdateForm']);
-//Route::put('booking/{id}',[BookingController::class,'doUpdate']);
+Route::resource("news",NewsController::class);
+

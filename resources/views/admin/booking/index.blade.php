@@ -18,6 +18,11 @@
         </div><!-- /.container-fluid -->
     </section>
     <div class="box-body table-responsive no-padding">
+        @if ($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>{{ $message }}</p>
+            </div>
+        @endif
         <table class="table table-hover">
             <tbody>
             <tr>
@@ -29,7 +34,6 @@
                 <th>Khách hàng ghi chú</th>
                 <th>Trạng Thái</th>
                 <th colspan="2">Ghi chú</th>
-
             </tr>
             @foreach ($orders as $index => $ct)
                 <tr>
@@ -42,7 +46,9 @@
                     <td>{{$mappingStatus[$ct->status]}}</td>
                     <td>{{$ct->remark}}</td>
                     <td>
-                        <a href="{{ route('booking.edit', $ct->id) }}"><i class="fas fa-edit fa-lg text-danger"></i></a>
+                        <a href="{{ route('booking.edit', $ct->id) }}">
+                            <i class="fas fa-edit  fa-lg"></i>
+                        </a>
                     </td>
                 </tr>
             @endforeach
