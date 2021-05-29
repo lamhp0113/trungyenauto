@@ -17,7 +17,7 @@ use App\Http\Controllers\NewsController;
 |
 */
 
-Route::get('/',[HomeController::class,'home']);
+Route::get('/', [HomeController::class, 'home']);
 Route::get('contact', function () {
     return view('giaodien.contact');
 });
@@ -26,16 +26,16 @@ Route::get('about', function () {
 });
 
 Route::get('admin', function () {
-    return view('admin.index');
+    return redirect()->route('booking.index');
 });
 
-Route::get('category',[CategoryController::class,'list']);
-Route::get('category/create',[CategoryController::class,'displayCreateForm']);
-Route::post('category/create',[CategoryController::class,'doCreate']);
-Route::get('category/{id}',[CategoryController::class,'displayUpdateForm']);
-Route::put('category/{id}',[CategoryController::class,'doUpdate']);
-Route::delete('category/{id}',[CategoryController::class,'doDelete']);
+Route::get('category', [CategoryController::class, 'list']);
+Route::get('category/create', [CategoryController::class, 'displayCreateForm']);
+Route::post('category/create', [CategoryController::class, 'doCreate']);
+Route::get('category/{id}', [CategoryController::class, 'displayUpdateForm']);
+Route::put('category/{id}', [CategoryController::class, 'doUpdate']);
+Route::delete('category/{id}', [CategoryController::class, 'doDelete']);
 
-Route::resource("booking",BookingController::class);
-Route::resource("news",NewsController::class);
+Route::resource("booking", BookingController::class);
+Route::resource("news", NewsController::class);
 

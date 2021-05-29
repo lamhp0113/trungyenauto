@@ -32,10 +32,7 @@
                 <li class="nav-item">
                     <a href="/category" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
-                        <p>
-                            Danh mục
-
-                        </p>
+                        <p> Loại dịch vụ</p>
                     </a>
 
                 </li>
