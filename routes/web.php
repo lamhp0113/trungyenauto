@@ -37,5 +37,9 @@ Route::put('category/{id}', [CategoryController::class, 'doUpdate']);
 Route::delete('category/{id}', [CategoryController::class, 'doDelete']);
 
 Route::resource("booking", BookingController::class);
-Route::resource("news", NewsController::class);
+Route::resource("news", NewsController::class,);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
