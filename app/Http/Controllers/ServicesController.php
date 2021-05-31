@@ -4,40 +4,28 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Services;
+use App\Models\Category;
+use Illuminate\Support\Facades\DB;
 
 class ServicesController extends Controller
 {
     public function index()
     {
-        $services= Services::paginate(5);
+        $services = DB::table('services')
+            ->leftJoin('category', 'services.category_id', '=', 'category.id')
+            ->paginate(5, array('services.*','category.name as category_name'));
         return view('admin.services.list', compact('services'))
-        ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 5);
+
 
     }
     public function create()
     {
-        return view('admin.services.create');
+        $category= Category::orderBy('priority')->get();
+        return view('admin.services.create' ,compact('category'));
     }
     public function store(Request $request)
     {
-//        $services=services::create($request->all());
-//        if($request->hasFile('myFile'))
-//        {
-//            $file= $request->file('myFile');//lay ra ten input file
-//            if ($file->getClientOriginalExtension('myFile')== "jpg"){// KIEEM TRA CO PHAI DUOI JPG
-//                $filename= $file->getClientOriginalName('myFile');// lay ra ten file
-//                $file->move('images',$filename); //lufile(    )e
-//                $services->images='images/'.$filename;
-//            }else{
-//                echo "no file jpg";
-//            };
-//
-//        }else{
-//            echo "Chưa có file";
-//        }
-//        return redirect()->route('services.index')
-//            ->with('success', 'Đặt lịch thành công.')
-//
         $services = new Services;
         $services->fill($request->all());
         if($request->hasFile('myFile'))
@@ -61,7 +49,8 @@ class ServicesController extends Controller
     public function displayUpdateForm($id)
     {
         $services = Services::find($id);
-        return view('admin.services.update',['services'=>$services]);
+        $category= Category::orderBy('priority')->get();
+        return view('admin.services.update',['services'=>$services],['category'=>$category]);
     }
     public function doUpdate(Request $request)
     {

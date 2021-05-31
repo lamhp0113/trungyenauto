@@ -20,6 +20,15 @@
                                 <input class="form-control" required type="text" name="name">
                             </div>
                             <div class="form-group">
+                                <label>Loại dịch vụ</label>
+                                <select class="form-control" name="category_id" >
+                                    @foreach($category as $dv)
+                                    <option value="{{$dv->id}}" >{{$dv->name}} </option>
+                                    @endforeach
+                                </select>
+
+                            </div>
+                            <div class="form-group">
                                 <label>Mô tả</label>
                                 <input class="form-control" required type="text" style="width:60%" name="short_description">
                             </div>
