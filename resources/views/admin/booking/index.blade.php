@@ -28,17 +28,20 @@
             <tr>
                 <th>STT</th>
                 <th>Tên Khách hàng</th>
+                <th>Tên dịch vụ</th>
                 <th>Số điện thoại</th>
                 <th>email</th>
                 <th>thời gian đặt lịch</th>
                 <th>Khách hàng ghi chú</th>
                 <th>Trạng Thái</th>
-                <th colspan="2">Ghi chú</th>
+                <th>Ghi Chú</th>
             </tr>
             @foreach ($orders as $index => $ct)
                 <tr>
-                    <td>{{++$index}}</td>
+                    <td >{{++$index}}</td>
                     <td>{{$ct->customer_name}} </td>
+
+                    <td>{{$ct->service_name}} </td>
                     <td>{{$ct->phone}}</td>
                     <td>{{$ct->email}}</td>
                     <td>{{$ct->booking_time}} </td>

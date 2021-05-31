@@ -37,17 +37,18 @@
 
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/booking" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p> Lịch đặt sửa chữa </p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="/admin/services" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
                         <p> Dịch vụ </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="/admin/booking" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p> Lịch đặt sửa chữa </p>
+                    </a>
+                </li>
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
