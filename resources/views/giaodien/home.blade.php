@@ -134,76 +134,7 @@
         </div>
     </div>
 </section>
-<section class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb img"
-         style="background-image: url(images/bg_3.jpg);">
-    <div class="overlay"></div>
-    <div class="container" id="datlich">
-        <div class="row d-md-flex justify-content-end">
-            <div class="col-md-12 col-lg-6 half p-3 py-5 pl-lg-5 ftco-animate heading-section heading-section-white">
-                <span class="subheading">Đặt lịch bảo dưỡng và sửa chữa</span>
-                <h2 class="mb-4">Miễn phí tư vấn</h2>
-                <form action="{{ route('booking.store') }}" method="POST" class="appointment">
-                    @csrf
-                    <input type="hidden" name="status"  value="0" />
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <div class="form-field">
-                                    <div class="select-wrap">
-                                        <div class="icon"><span class="fa fa-chevron-down"></span></div>
-
-                                        <select name="service_id"  class="form-control">
-                                            <option value="">Chọn dịch vụ</option>
-                                            @foreach($services as $ct)
-                                            <option value="{{$ct->id}}">{{$ct->name}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" name="customer_name" class="form-control" required="text" placeholder="Tên Bạn">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" name="phone"  minlength="10" pattern="\d*" maxlength="13"  class="form-control" placeholder="Số điện thoại">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <div class="input-wrap">
-
-                                    <input type="datetime-local" name="booking_time"  required="text" class="form-control" placeholder="Ngày đặt">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="email" required="email" name="email"  class="form-control" placeholder="Hòm thư">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <textarea name="customer_comment" id="" cols="30" rows="7" class="form-control"
-                                          placeholder="Ghi Chú"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <input type="submit" value="Đặt lịch" class="btn btn-dark py-3 px-4">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-
+@include('giaodien.layouts.booking')
 <section class="ftco-section bg-light">
     <div class="container">
         <div class="row justify-content-center pb-5 mb-3">

@@ -15,13 +15,18 @@ class BookingController extends Controller
             ->paginate(5, array('booking.*','services.name as service_name'));
         return view('admin.booking.index', compact('orders'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
-
-
     }
 
     public function store(Request $request)
     {
+        $serviceId = $request->service_id;
+        if(!isset($serviceId)){
+            $request->merge([
+                'service_id' => 0,
+            ]);
+        }
         Booking::create($request->all());
+        // gui mail
         return redirect('/thank')
             ->with('success', 'Đặt lịch thành công.');
     }

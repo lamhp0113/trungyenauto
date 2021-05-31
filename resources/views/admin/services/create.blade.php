@@ -47,11 +47,11 @@
                             @include('ckfinder::setup')
                             <div class="form-group">
                                 <label>Giá</label>
-                                <input class="form-control" required type="number" style="width:60%" name="price">
+                                <input class="form-control"  type="number" style="width:60%" name="price">
                             </div>
                             <div class="form-group">
                                 <label>Hình ảnh</label>
-                                <input class="form-control"  required type="file" style="width:60%" name="myFile">
+                                <input class="form-control"  type="file" style="width:60%" name="myFile">
                             </div>
                         </div>
                         <!-- /.card-body -->

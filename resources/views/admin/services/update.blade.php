@@ -51,7 +51,7 @@
                             @include('ckfinder::setup')
                             <div class="form-group">
                                 <label>Giá</label>
-                                <input class="form-control" type="number" required value="{{$services->price}}"
+                                <input class="form-control" type="number"  value="{{$services->price}}"
                                        style="width:60%" name="price">
                             </div>
                             <div class="form-group">
