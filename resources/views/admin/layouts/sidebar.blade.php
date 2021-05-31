@@ -22,7 +22,7 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="/news" class="nav-link">
+                    <a href="/admin/news" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             Bài viết
@@ -30,19 +30,24 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/category" class="nav-link">
+                    <a href="/admin/category" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
                         <p> Loại dịch vụ</p>
                     </a>
 
                 </li>
                 <li class="nav-item">
-                    <a href="/booking" class="nav-link">
+                    <a href="/admin/booking" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
                         <p> Lịch đặt sửa chữa </p>
                     </a>
                 </li>
-
+                <li class="nav-item">
+                    <a href="/admin/services" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p> Dịch vụ </p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

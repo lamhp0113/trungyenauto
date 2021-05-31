@@ -22,7 +22,7 @@ class CategoryController extends Controller
         $cate->name=$request->name;
         $cate->priority=$request->priority;
         $cate->save();
-        return redirect('category');
+        return redirect('admin/category')->with('success', 'Thêm bài thành công.');
     }
 
     public function displayUpdateForm($id)
@@ -35,13 +35,13 @@ class CategoryController extends Controller
     {
         $cate=Category::find($request->id);
         $cate->update($request->all());
-        return redirect('category');
+        return redirect('admin/category')->with('success', 'Cập nhật bài thành công.');
     }
 
     public function doDelete($id)
     {
         $cate=Category::find($id);
         $cate->delete();
-        return redirect('/category');
+        return redirect('admin/category')->with('success', 'Xóa bài thành công.');
     }
 }

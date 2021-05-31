@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ServicesController;
+
 use App\Http\Controllers\NewsController;
 
 /*
@@ -17,18 +19,14 @@ use App\Http\Controllers\NewsController;
 |
 */
 
-Route::get('/', [HomeController::class, 'home']);
-Route::get('contact', function () {
-    return view('giaodien.contact');
-});
-Route::get('about', function () {
-    return view('giaodien.about');
-});
+Route::get('/',[HomeController::class,'home']);
+Route::get('contact',[HomeController::class,'contact']);
+Route::get('about',[HomeController::class,'about']);
 
 Route::get('admin', function () {
     return redirect()->route('booking.index');
 });
-
+Route::group(['prefix'=>'admin'],function(){
 Route::get('category', [CategoryController::class, 'list']);
 Route::get('category/create', [CategoryController::class, 'displayCreateForm']);
 Route::post('category/create', [CategoryController::class, 'doCreate']);
@@ -39,3 +37,12 @@ Route::delete('category/{id}', [CategoryController::class, 'doDelete']);
 Route::resource("booking", BookingController::class);
 Route::resource("news", NewsController::class);
 
+Route::get('services',[ServicesController::class,'index']);
+Route::get('services/create',[ServicesController::class,'create']);
+Route::post('services/create',[ServicesController::class,'store']);
+Route::get('update-services/{id}',[ServicesController::class,'displayUpdateForm']);
+Route::post('update-services/{id}',[ServicesController::class,'doUpdate']);
+Route::get('services/{id}',[ServicesController::class,'getXoa']);
+// tin tuc
+
+});

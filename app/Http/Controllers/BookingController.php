@@ -9,7 +9,7 @@ class BookingController extends Controller
 {
     public function index()
     {
-        $orders = Booking::latest()->paginate(10);
+        $orders = Booking::latest()->paginate(1);
         return view('admin.booking.index', compact('orders'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }

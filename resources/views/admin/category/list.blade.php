@@ -8,6 +8,12 @@
                 </div>
             </div>
         </div><!-- /.container-fluid -->
+        <div class="card-body table-responsive p-0">
+            @if ($message = Session::get('success'))
+                <div class="alert alert-success">
+                    <p>{{ $message }}</p>
+                </div>
+        @endif
     </section>
     <div class="box-body table-responsive no-padding">
         <table class="table table-hover">
