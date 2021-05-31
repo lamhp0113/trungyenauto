@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Jobs\SendEmail;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Booking;
@@ -19,6 +19,7 @@ class BookingController extends Controller
 
     public function store(Request $request)
     {
+        $email = $request->email;
         $serviceId = $request->service_id;
         if(!isset($serviceId)){
             $request->merge([
@@ -27,6 +28,10 @@ class BookingController extends Controller
         }
         Booking::create($request->all());
         // gui mail
+        $message = [
+            'customer_name' => $request->customer_name
+        ];
+        SendEmail::dispatch($message, $email)->delay(now()->addMinute(1));
         return redirect('/thank')
             ->with('success', 'Đặt lịch thành công.');
     }
