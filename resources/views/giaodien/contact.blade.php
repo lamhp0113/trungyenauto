@@ -97,9 +97,6 @@
 					</div>
 				</div>
     	</div>
-
-@include('giaodien.layouts.booking')
-
 <!-- footer -->
 @include('giaodien.layouts.footer')
 @include('giaodien.layouts.script')

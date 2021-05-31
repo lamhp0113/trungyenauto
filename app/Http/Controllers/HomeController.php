@@ -40,8 +40,10 @@ class HomeController extends Controller
 
     }
 
-
-
-
-
+    public function list($type_id)
+    {
+        // tim tintuc type =$type_id
+        $cate=Category::all();
+        return view('giaodien.news',compact('cate'));
+    }
 }

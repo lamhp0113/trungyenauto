@@ -154,7 +154,6 @@
         </div>
       </div>
     </section>
-@include('giaodien.layouts.booking')
 @include('giaodien.layouts.footer')
 @include('giaodien.layouts.script')
 </body>

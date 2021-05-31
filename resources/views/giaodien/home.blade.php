@@ -5,7 +5,7 @@
 </head>
 <body>
 @include('giaodien.layouts.main-header')
-@include('giaodien.layouts.category')
+@include('giaodien.layouts.category', ['isDisplayBooking' => true])
 
 <!-- END nav -->
 <div class="hero-wrap">
