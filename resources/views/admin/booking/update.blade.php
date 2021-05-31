@@ -23,6 +23,11 @@
                                        name="customer_name"/>
                             </div>
                             <div class="form-group">
+                                <label>Tên dịch vụ </label>
+                                <input class="form-control"  value="{{$booking->service_name}}" disabled
+                                />
+                            </div>
+                            <div class="form-group">
                                 <label>Số điện thoại</label>
                                 <input class="form-control" value="{{$booking->phone}}" disabled
                                        name="phone"/>

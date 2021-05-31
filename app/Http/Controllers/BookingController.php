@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Booking;
 
@@ -9,21 +10,30 @@ class BookingController extends Controller
 {
     public function index()
     {
-        $orders = Booking::latest()->paginate(1);
+        $orders = DB::table('booking')
+            ->leftJoin('services', 'booking.service_id', '=', 'services.id')->latest()
+            ->paginate(5, array('booking.*','services.name as service_name'));
         return view('admin.booking.index', compact('orders'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
+
+
     }
 
     public function store(Request $request)
     {
         Booking::create($request->all());
-        return redirect()->route('projects.index')
+        return redirect('/thank')
             ->with('success', 'Đặt lịch thành công.');
     }
 
     public function edit(Booking $booking)
     {
+        $booking= DB::table('booking')
+        ->leftJoin('services', 'booking.service_id', '=', 'services.id')
+            ->select('booking.*','services.name as service_name')->where('booking.id',$booking->id)
+            ->first();
         return view('admin.booking.update', compact('booking'));
+
     }
 
     public function update(Request $request, Booking $booking)

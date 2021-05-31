@@ -18,6 +18,7 @@ class Booking extends Model
         'booking_time',
         'status',
         'customer_comment',
-        'remark'
+        'remark',
+        'service_id'
     ];
 }

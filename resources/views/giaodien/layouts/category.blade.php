@@ -19,7 +19,7 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown"><a class="nav-link " href="index.html">Trang chủ</a>
+                <li class="nav-item dropdown"><a class="nav-link " href="/">Trang chủ</a>
                 </li>
                 <li class="nav-item dropdown"><a class="nav-link" href="/about">Giới thiệu</a>
 

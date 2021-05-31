@@ -8,7 +8,7 @@
                 <!-- general form elements -->
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Thêm mới bài viết</h3>
+                        <h3 class="card-title">Thêm mới dịch vụ</h3>
                     </div>
                     <form action="create" method="post" enctype="multipart/form-data">
                         @csrf
@@ -16,7 +16,7 @@
 
 
                             <div class="form-group">
-                                <label>Tiêu đề</label>
+                                <label>Tên dịch vụ</label>
                                 <input class="form-control" required type="text" name="name">
                             </div>
                             <div class="form-group">

@@ -142,20 +142,21 @@
             <div class="col-md-12 col-lg-6 half p-3 py-5 pl-lg-5 ftco-animate heading-section heading-section-white">
                 <span class="subheading">Đặt lịch bảo dưỡng và sửa chữa</span>
                 <h2 class="mb-4">Miễn phí tư vấn</h2>
-                <form action="#" class="appointment">
+                <form action="{{ route('booking.store') }}" method="POST" class="appointment">
+                    @csrf
+                    <input type="hidden" name="status"  value="0" />
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
                                 <div class="form-field">
                                     <div class="select-wrap">
                                         <div class="icon"><span class="fa fa-chevron-down"></span></div>
-                                        <select name="" id="" class="form-control">
+
+                                        <select name="service_id"  class="form-control">
                                             <option value="">Chọn dịch vụ</option>
-                                            <option value="">Change Oil</option>
-                                            <option value="">Engine Repair</option>
-                                            <option value="">Battery Replace</option>
-                                            <option value="">Change Tire</option>
-                                            <option value="">Tow Truck</option>
+                                            @foreach($services as $ct)
+                                            <option value="{{$ct->id}}">{{$ct->name}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -163,25 +164,30 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Tên Bạn">
+                                <input type="text" name="customer_name" class="form-control" required="text" placeholder="Tên Bạn">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Loại xe">
+                                <input type="text" name="phone"  minlength="10" pattern="\d*" maxlength="13"  class="form-control" placeholder="Số điện thoại">
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <div class="input-wrap">
-                                    <div class="icon"><span class="fa fa-calendar"></span></div>
-                                    <input type="text" class="form-control appointment_date" placeholder="Ngày đặt">
+
+                                    <input type="datetime-local" name="booking_time"  required="text" class="form-control" placeholder="Ngày đặt">
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" required="email" name="email"  class="form-control" placeholder="Hòm thư">
+                            </div>
+                        </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <textarea name="" id="" cols="30" rows="7" class="form-control"
+                                <textarea name="customer_comment" id="" cols="30" rows="7" class="form-control"
                                           placeholder="Ghi Chú"></textarea>
                             </div>
                         </div>

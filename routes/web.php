@@ -22,6 +22,7 @@ use App\Http\Controllers\NewsController;
 Route::get('/',[HomeController::class,'home']);
 Route::get('contact',[HomeController::class,'contact']);
 Route::get('about',[HomeController::class,'about']);
+Route::get('thank',[HomeController::class,'thank']);
 
 Route::get('admin', function () {
     return redirect()->route('booking.index');

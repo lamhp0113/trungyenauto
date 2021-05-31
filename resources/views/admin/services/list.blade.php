@@ -6,7 +6,7 @@
                  <div class="container-fluid">
                      <div class="row mb-2">
                          <div class="col-sm-6">
-                             <h1>Danh sách trang tin</h1>
+                             <h1>Danh sách dịch vụ</h1>
                          </div>
                      </div>
                  </div><!-- /.container-fluid -->
@@ -22,7 +22,7 @@
  					<tbody>
  						<tr>
  							<th>ID</th>
- 							<th>Tiêu đề</th>
+ 							<th>Tên dịch vụ</th>
  							<th>Mô tả</th>
  							<th>Nội dung</th>
  							<th>Gia</th>
