@@ -23,6 +23,7 @@
  						<tr>
  							<th>ID</th>
  							<th>Tên dịch vụ</th>
+                            <th>Loại dịch vụ</th>
  							<th>Mô tả</th>
  							<th>Nội dung</th>
  							<th>Gia</th>
@@ -39,6 +40,7 @@
  						<tr>
  							<td>{{$dv->id}}</td>
  							<td>{{$dv->name}}</td>
+                            <td>{{$dv->category_name}}</td>
  							<td>{{$dv->short_description}}</td>
  							<td>{{$dv->	long_description}}</td>
  							<td>{{$dv->price}}</td>

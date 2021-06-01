@@ -7,6 +7,7 @@ use App\Models\News;
 
 class NewsController extends Controller
 {
+
     public function index()
     {
         $news = News::latest()->paginate(5);
@@ -51,4 +52,5 @@ class NewsController extends Controller
         return redirect()->route('news.index')
             ->with('success', 'Cập nhập thành công');
     }
+
 }

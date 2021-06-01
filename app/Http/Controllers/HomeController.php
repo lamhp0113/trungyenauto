@@ -20,24 +20,30 @@ class HomeController extends Controller
     public function contact()
     {
         $cate=Category::all();
-        return view('giaodien.contact',compact('cate'));
+        $services=Services::all();
+        return view('giaodien.contact',compact('cate','services'));
 
     }
     public function thank()
     {
         $cate=Category::all();
-        return view('giaodien.thank',compact('cate'));
+        $services=Services::all();
+        return view('giaodien.thank',compact('cate','services'));
 
     }
+
     public function about()
     {
         $cate=Category::all();
-        return view('giaodien.about',compact('cate'));
+        $services=Services::all();
+        return view('giaodien.about',compact('cate','services'));
 
     }
 
-
-
-
-
+    public function list($type_id)
+    {
+        // tim tintuc type =$type_id
+        $cate=Category::all();
+        return view('giaodien.news',compact('cate'));
+    }
 }

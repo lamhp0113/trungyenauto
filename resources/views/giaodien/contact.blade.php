@@ -27,7 +27,7 @@
 														<input type="text" class="form-control" name="name" id="name" placeholder="Name">
 													</div>
 												</div>
-												<div class="col-md-6"> 
+												<div class="col-md-6">
 													<div class="form-group">
 														<input type="email" class="form-control" name="email" id="email" placeholder="Email">
 													</div>
@@ -97,8 +97,6 @@
 					</div>
 				</div>
     	</div>
-
-
 <!-- footer -->
 @include('giaodien.layouts.footer')
 @include('giaodien.layouts.script')

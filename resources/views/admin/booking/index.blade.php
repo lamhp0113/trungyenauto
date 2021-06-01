@@ -40,8 +40,7 @@
                 <tr>
                     <td >{{++$index}}</td>
                     <td>{{$ct->customer_name}} </td>
-
-                    <td>{{$ct->service_name}} </td>
+                    <td>{{$ct->service_name?$ct->service_name:'dịch vụ khác'}} </td>
                     <td>{{$ct->phone}}</td>
                     <td>{{$ct->email}}</td>
                     <td>{{$ct->booking_time}} </td>
