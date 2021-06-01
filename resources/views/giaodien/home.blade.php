@@ -10,14 +10,14 @@
 <!-- END nav -->
 <div class="hero-wrap">
     <div class="home-slider owl-carousel">
-        <div class="slider-item" style="background-image:url(images/bg_1.jpg);">
+        <div class="slider-item" style="background-image:url({{asset('images/background/bg01.jpg')}});">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row no-gutters slider-text align-items-center justify-content-start">
                     <div class="col-md-6 ftco-animate">
                         <div class="text w-100">
-                            <h2>We are best car repair services</h2>
-                            <h1 class="mb-4">Make your car last longer</h1>
+                            <h2>Chúng tôi có đội ngũ kỹ thuật giàu kinh nghiệm</h2>
+                            <h1 class="mb-4">Đã đến thời gian bảo dưỡng?</h1>
                             <p><a href="#" class="btn btn-primary">Đặt lịch ngay</a></p>
                         </div>
                     </div>
@@ -25,15 +25,15 @@
             </div>
         </div>
 
-        <div class="slider-item" style="background-image:url(images/bg_2.jpg);">
+        <div class="slider-item" style="background-image:url({{asset('images/background/bg03.jpeg')}});">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row no-gutters slider-text align-items-center justify-content-start">
                     <div class="col-md-6 ftco-animate">
                         <div class="text w-100">
-                            <h2>We care about your car</h2>
-                            <h1 class="mb-4">It's time to come to repair your car</h1>
-                            <p><a href="#" class="btn btn-primary">Đặt lịch ngay</a></p>
+                            <h2>Chúng tôi quan tâm đến từng chi tiết nhỏ</h2>
+                            <h1 class="mb-4">Tăng tuổi thọ của xe</h1>
+                            <p><a href="#datlich" class="btn btn-primary">Đặt lịch ngay</a></p>
                         </div>
                     </div>
                 </div>
@@ -41,12 +41,6 @@
         </div>
     </div>
 </div>
-
-<section class="intro">
-
-    </div>
-    </div>
-</section>
 
 <section class="ftco-section">
     <div class="container">

@@ -5,7 +5,7 @@
             <span class="fa fa-bars"></span> Menu
         </button>
         @if(isset($isDisplayBooking))
-            <div class="form-group d-flex order-lg-last" style="font-size: 12px;
+            <div class="form-group d-flex order-lg-last" style="font-size: 16px;
         background:#f79f24;
         margin: 0;
         padding: 0;
@@ -36,8 +36,6 @@
                             @endif
                         @endforeach
                     </div>
-                </li>
-                <li class="nav-item dropdown"><a href="#" class="nav-link">Sản phẩm </a>
                 </li>
                 <li class="nav-item dropdown"><a href="#" class="nav-link">Khuyến mại</a>
                     <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">

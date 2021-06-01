@@ -1,5 +1,5 @@
 <section class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb img"
-         style="background-image: url(images/bg_3.jpg);">
+         style="background-image:url({{asset('images/bg_3.jpg')}});">
     <div class="overlay"></div>
     <div class="container" id="datlich">
         <div class="row d-md-flex justify-content-end">
