@@ -31,6 +31,7 @@
                         <th>STT</th>
                         <th>Tiêu đề</th>
                         <th>Thể loại</th>
+                        <th>Hình ảnh</th>
                         <th>Ngày đăng</th>
                         <th>
                             <a class="btn btn-success" href="{{ route('news.create') }}">Thêm mới</a>
@@ -41,6 +42,9 @@
                             <td>{{++$index}}</td>
                             <td>{{$ct->title}}</td>
                             <td>{{$mappingStatus[$ct->type]}}</td>
+                            <td>
+                                <img src="{{asset($ct->image)}}" width="50px" height="50px" alt="">
+                            </td>
                             <td>{{$ct->created_at }}</td>
                             <td>
                                 <form action="{{ route('news.destroy', $ct->id) }}" method="POST">

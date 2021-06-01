@@ -12,8 +12,8 @@ class ServicesController extends Controller
     public function index()
     {
         $services = DB::table('services')
-            ->leftJoin('category', 'services.category_id', '=', 'category.id')
-            ->paginate(5, array('services.*','category.name as category_name'));
+                ->leftJoin('category', 'services.category_id', '=', 'category.id')
+                ->paginate(5, array('services.*','category.name as category_name'));
         return view('admin.services.list', compact('services'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
 

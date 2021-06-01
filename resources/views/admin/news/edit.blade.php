@@ -19,7 +19,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form action="{{ route('news.update', $news->id) }}" method="POST">
+                    <form action="{{ route('news.update', $news->id) }}" method="POST"  enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="card-body">
@@ -54,6 +54,10 @@
                                 });
                             </script>
                             @include('ckfinder::setup')
+                            <div class="form-group">
+                                <label>Hình ảnh</label>
+                                <input class="form-control" type="file" name="myFile" value="{{$news->image}}"/>
+                            </div>
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">

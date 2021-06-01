@@ -27,19 +27,19 @@
                 <li class="nav-item dropdown"><a class="nav-link" href="/about">Giới thiệu</a>
 
                 </li>
-                <li class="nav-item dropdown"><a href="services.html" class="nav-link">Dịch vụ</a>
+                <li class="nav-item dropdown"><a href="#" class="nav-link">Dịch vụ</a>
                     <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
                         @foreach($cate as $ca)
-                            <a class="dropdown-item" href="#">{{$ca->name}}</a>
+                            <a class="dropdown-item" href="/services/{{$ca->id}}">{{$ca->name}}</a>
                             @if(!($loop->last))
                                 <div class="dropdown-divider"></div>
                             @endif
                         @endforeach
                     </div>
                 </li>
-                <li class="nav-item dropdown"><a href="project.html" class="nav-link">Sản phẩm </a>
+                <li class="nav-item dropdown"><a href="#" class="nav-link">Sản phẩm </a>
                 </li>
-                <li class="nav-item dropdown"><a href="blog.html" class="nav-link">Khuyến mại</a>
+                <li class="nav-item dropdown"><a href="#" class="nav-link">Khuyến mại</a>
                     <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/news/0">Tin tức</a>
                         <div class="dropdown-divider"></div>

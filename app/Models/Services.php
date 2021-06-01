@@ -18,7 +18,7 @@ class Services extends Model
         'booking_time',
         'price',
         'images',
+];
 
 
-    ];
 }
