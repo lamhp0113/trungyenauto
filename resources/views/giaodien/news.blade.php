@@ -18,7 +18,7 @@
             @foreach($news as $tt)
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20 rounded" style="background-image: url({{asset($tt->image?$tt->image:'images/no_image.jpg')}});">
+                    <a href="/news_detail/{{$tt->id}}" class="block-20 rounded" style="background-image: url({{asset($tt->image?$tt->image:'images/no_image.jpg')}});">
                     </a>
                     <div class="text mt-3">
                         <div class="posted mb-3 d-flex">

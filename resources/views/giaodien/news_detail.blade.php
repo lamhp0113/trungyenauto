@@ -28,12 +28,11 @@
             <div class="col-lg-4 sidebar pl-lg-5 ftco-animate">
                 <div class="sidebar-box ftco-animate">
                     <div class="categories">
-                        <h3>Services</h3>
-                        <li><a href="#">Oil Change <span class="fa fa-chevron-right"></span></a></li>
-                        <li><a href="#">Batteries &amp; Brake Check <span class="fa fa-chevron-right"></span></a></li>
-                        <li><a href="#">Tow Truck <span class="fa fa-chevron-right"></span></a></li>
-                        <li><a href="#">Tire Change <span class="fa fa-chevron-right"></span></a></li>
-                        <li><a href="#">Engine Repair<span class="fa fa-chevron-right"></span></a></li>
+                        <h3>Dịch vụ khác</h3>
+
+                        @foreach($serviceslist as $sv)
+                            <li><a href="/services_detail/{{$sv->id}}">{{$sv->name}} <span class="fa fa-chevron-right"></span></a></li>
+                        @endforeach
                     </div>
                 </div>
             </div>

@@ -15,8 +15,10 @@ class HomeController extends Controller
     public function home()
     {
         $cate = Category::all();
+        $news =News::inRandomOrder()->limit(4)->get();
         $services = Services::all();
-        return view('giaodien.home', compact('cate', 'services'));
+        $serviceslist = Services::inRandomOrder()->limit(6)->get();
+        return view('giaodien.home', compact('cate', 'services','news','serviceslist'));
 
     }
 
@@ -52,8 +54,10 @@ class HomeController extends Controller
     }
     public function newsDetail($id){
         $cate = Category::all();
+        $serviceslist =Services::inRandomOrder()->limit(6)->get();
         $news =News::find($id);
-        return view('giaodien.news_detail', compact('cate','news' ));
+
+        return view('giaodien.news_detail', compact('cate','news','serviceslist' ));
     }
     public function servicesList($id){
         $cate = Category::all();
@@ -65,6 +69,8 @@ class HomeController extends Controller
     public function servicesDetail($id){
         $cate = Category::all();
         $services =Services::find($id);
-        return view('giaodien.services_detail', compact('cate','services' ));
+        $serviceslist =Services::inRandomOrder()->limit(6)->get();
+        return view('giaodien.services_detail', compact('cate','services','serviceslist' ));
     }
+
 }

@@ -51,156 +51,53 @@
             </div>
         </div>
         <div class="row">
+
+            @foreach( $serviceslist as $sv)
             <div class="col-md-4 services ftco-animate">
                 <div class="d-block d-flex">
                     <div class="icon d-flex justify-content-center align-items-center">
                         <span class="flaticon-car-service"></span>
                     </div>
                     <div class="media-body pl-3">
-                        <a href="#"><h3 class="heading">Bão dưỡng ô tô định kỳ</h3></a>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                            unorthographic.</p>
-                        <p><a href="#" class="btn-custom">Đọc thêm</a></p>
-                    </div>
-                </div>
-                <div class="d-block d-flex">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="flaticon-tyre"></span>
-                    </div>
-                    <div class="media-body pl-3">
-                        <a href="#"><h3 class="heading">Đại tu động cơ ô tô</h3></a>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                            unorthographic.</p>
-                        <p><a href="#" class="btn-custom">Đọc thêm</a></p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-4 services ftco-animate">
-                <div class="d-block d-flex">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="flaticon-battery"></span>
-                    </div>
-                    <div class="media-body pl-3">
-                        <a href="#"><h3 class="heading">Bão dưỡng ô tô định kỳ</h3></a>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                            unorthographic.</p>
-                        <p><a href="#" class="btn-custom">Đọc thêm</a></p>
-                    </div>
-                </div>
-                <div class="d-block d-flex">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="flaticon-car-engine"></span>
-                    </div>
-                    <div class="media-body pl-3">
-                        <a href="#"><h3 class="heading">Bão dưỡng ô tô định kỳ</h3></a>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                            unorthographic.</p>
-                        <p><a href="#" class="btn-custom">Đọc thêm</a></p>
+                        <a href="#"><h3 class="heading">{{$sv->name}}</h3></a>
+                        <p>{{$sv->short_description}}</p>
+                        <p><a href="/services_detail/{{$sv->id}}" class="btn-custom">Đọc thêm</a></p>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-4 services ftco-animate">
-                <div class="d-block d-flex">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="flaticon-tow-truck"></span>
-                    </div>
-                    <div class="media-body pl-3">
-                        <a href="#"><h3 class="heading">Bão dưỡng ô tô định kỳ</h3></a>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                            unorthographic.</p>
-                        <p><a href="#" class="btn-custom">Đọc thêm</a></p>
-                    </div>
-                </div>
-                <div class="d-block d-flex">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="flaticon-repair"></span>
-                    </div>
-                    <div class="media-body pl-3">
-                        <a href="#"><h3 class="heading">Bão dưỡng ô tô định kỳ</h3></a>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                            unorthographic.</p>
-                        <p><a href="#" class="btn-custom">Đọc thêm</a></p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
 @include('giaodien.layouts.booking')
-<section class="ftco-section bg-light">
-    <div class="container">
-        <div class="row justify-content-center pb-5 mb-3">
-            <div class="col-md-7 heading-section text-center ftco-animate">
-                <span class="subheading">Price &amp; Plans</span>
-                <h2>Pricing</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-3 ftco-animate">
-                <div class="block-7">
-                    <div class="text-center">
-                        <span class="excerpt d-block">First PMS</span>
-                        <span class="price"><sup>$</sup> <span class="number">78.98</span></span>
+{{--<section class="ftco-section bg-light">--}}
+{{--    <div class="container">--}}
+{{--        <div class="row justify-content-center pb-5 mb-3">--}}
+{{--            <div class="col-md-7 heading-section text-center ftco-animate">--}}
 
-                        <div class="pricing-text">
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                        </div>
+{{--                <h2>Tin tức</h2>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="row">--}}
+{{--            @foreach($news as $tin)--}}
+{{--            <div class="col-md-6 col-lg-3 ftco-animate">--}}
+{{--                <div class="block-7">--}}
+{{--                    <div class="text-center">--}}
+{{--                        <span class="excerpt d-block">{{$tin->title}}</span>--}}
+{{--                        <span class="price"><sup></sup> <a href="/contact"><span class="number">Liên hệ</span></a></span>--}}
 
-                        <a href="#" class="btn btn-secondary d-block px-2 py-3">Get Started</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 ftco-animate">
-                <div class="block-7">
-                    <div class="text-center">
-                        <span class="excerpt d-block">Engine Diagnostics</span>
-                        <span class="price"><sup>$</sup> <span class="number">83.75</span></span>
+{{--                        <div class="pricing-text">--}}
+{{--                            <p>{{$tin->short_description}}</p>--}}
+{{--                        </div>--}}
 
-                        <div class="pricing-text">
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                        </div>
-
-                        <a href="#" class="btn btn-secondary d-block px-2 py-3">Get Started</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 ftco-animate">
-                <div class="block-7">
-                    <div class="text-center">
-                        <span class="excerpt d-block">Tow Truck</span>
-                        <span class="price"><sup>$</sup> <span class="number">85.00</span></span>
-
-                        <div class="pricing-text">
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                        </div>
-
-                        <a href="#" class="btn btn-secondary d-block px-2 py-3">Get Started</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 ftco-animate">
-                <div class="block-7">
-                    <div class="text-center">
-                        <span class="excerpt d-block">Car Wash</span>
-                        <span class="price"><sup>$</sup> <span class="number">30.50</span></span>
-
-                        <div class="pricing-text">
-                            <p>A small river named Duden flows by their place and supplies it with the necessary
-                                regelialia.</p>
-                        </div>
-
-                        <a href="#" class="btn btn-secondary d-block px-2 py-3">Get Started</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+{{--                        <a href="/news_detail/{{$tin->id}}" class="btn btn-secondary d-block px-2 py-3">Xem chi tiết</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            @endforeach--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</section>--}}
 
 <!-- footer -->
 @include('giaodien.layouts.footer')
