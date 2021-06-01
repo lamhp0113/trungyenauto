@@ -43,7 +43,7 @@
                             <td>{{$ct->title}}</td>
                             <td>{{$mappingStatus[$ct->type]}}</td>
                             <td>
-                                <img src="{{asset($ct->image)}}" width="50px" height="50px" alt="">
+                                <img src="{{asset($ct->image?$ct->image:'images/no_image.jpg')}}" width="50px" height="50px" alt="">
                             </td>
                             <td>{{$ct->created_at }}</td>
                             <td>
