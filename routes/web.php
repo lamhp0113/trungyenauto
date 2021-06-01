@@ -23,6 +23,11 @@ Route::get('/',[HomeController::class,'home']);
 Route::get('contact',[HomeController::class,'contact']);
 Route::get('about',[HomeController::class,'about']);
 Route::get('thank',[HomeController::class,'thank']);
+Route::get('news/{id}', [HomeController::class,'list']);
+Route::get('news_detail/{id}', [HomeController::class,'newsDetail']);
+Route::get('services/{id}', [HomeController::class,'servicesList']);
+Route::get('services_detail/{id}', [HomeController::class,'servicesDetail']);
+
 
 Route::get('admin', function () {
     return redirect()->route('booking.index');

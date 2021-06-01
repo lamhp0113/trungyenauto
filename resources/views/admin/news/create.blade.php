@@ -19,7 +19,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form action="{{ route('news.store') }}" method="POST">
+                    <form action="{{ route('news.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
                             <div class="form-group" style="width: 50%">
@@ -55,7 +55,10 @@
                             </script>
                             @include('ckfinder::setup')
                         </div>
-                        <!-- /.card-body -->
+                        <div class="form-group">
+                            <label> Ảnh </label>
+                            <input class="form-control" type="file" name="myFile"/>
+                        </div>
                         <div class="card-footer">
                             <button type="submit" class="btn btn-primary">Thêm</button>
                             <button type="reset" class="btn btn-default">Làm Mới</button>

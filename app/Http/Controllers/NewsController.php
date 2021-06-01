@@ -7,6 +7,7 @@ use App\Models\News;
 
 class NewsController extends Controller
 {
+
     public function index()
     {
         $news = News::latest()->paginate(5);
@@ -17,7 +18,6 @@ class NewsController extends Controller
     public function destroy(News $news)
     {
         $news->delete();
-
         return redirect()->route('news.index')
             ->with('success', 'Xóa bài thành công.');
     }
@@ -34,7 +34,22 @@ class NewsController extends Controller
             'short_description' => 'required',
             'content' => 'required'
         ]);
+        if($request->hasFile('myFile'))
+        {
+            $file= $request->file('myFile');//lay ra ten input file
+            if ($file->getClientOriginalExtension('myFile')== "jpg"){// KIEEM TRA CO PHAI DUOI JPG
+                $filename= $file->getClientOriginalName('myFile');// lay ra ten file
+                $file->move('images',$filename); //luu file
+                $request->merge([
+                    'image' => 'images/'.$filename,
+                ]);
+            }else{
+                echo "no file jpg";
+            };
 
+        }else{
+            echo "Chưa có file";
+        }
         News::create($request->all());
         return redirect()->route('news.index')
             ->with('success', 'Thêm mới thành công.');
@@ -47,8 +62,25 @@ class NewsController extends Controller
 
     public function update(Request $request, News $news)
     {
+        if($request->hasFile('myFile'))
+        {
+            $file= $request->file('myFile');//lay ra ten input file
+            if ($file->getClientOriginalExtension('myFile')== "jpg"){// KIEEM TRA CO PHAI DUOI JPG
+                $filename= $file->getClientOriginalName('myFile');// lay ra ten file
+                $file->move('images',$filename); //luu file
+                $request->merge([
+                    'image' => 'images/'.$filename,
+                ]);
+            }else{
+                echo "no file jpg";
+            };
+
+        }else{
+            echo "Chưa có file";
+        }
         $news->update($request->all());
         return redirect()->route('news.index')
             ->with('success', 'Cập nhập thành công');
     }
+
 }

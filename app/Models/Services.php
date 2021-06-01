@@ -12,12 +12,13 @@ class Services extends Model
     public $timestamps = false;
     protected $fillable = [
         'name',
+        'category_id',
         'short_description',
         'long_description',
         'booking_time',
         'price',
         'images',
+];
 
 
-    ];
 }
