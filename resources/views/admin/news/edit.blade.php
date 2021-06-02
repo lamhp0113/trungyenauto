@@ -41,19 +41,12 @@
                                 <textarea name="short_description" class="form-control" rows="3"
                                           placeholder="Nhập ...">{{$news->short_description}}</textarea>
                             </div>
-
                             <div class="form-group">
                                 <label>Nội dung</label>
-                                <textarea class="form-control" rows="6" name="content"
-                                          placeholder="Nhập ...">{{$news->content}}</textarea>
+                                <textarea class="form-control" rows="6" id="content" name="content">{{$news->content}}</textarea>
                             </div>
-                            <script src={{ url('ckeditor/ckeditor.js') }}></script>
-                            <script>
-                                CKEDITOR.replace('content', {
-                                    filebrowserBrowseUrl: '{{ route('ckfinder_browser') }}',
-                                });
-                            </script>
-                            @include('ckfinder::setup')
+
+
                             <div class="form-group">
                                 <label>Hình ảnh</label>
                                 <input class="form-control" type="file" name="myFile" value="{{$news->image}}"/>
@@ -70,6 +63,55 @@
         </div>
     </div>
 
+    <script>
+        $('#lfm').filemanager('image');
 
+        $(document).ready(function(){
+
+            // Define function to open filemanager window
+            var lfm = function(options, cb) {
+                var route_prefix = (options && options.prefix) ? options.prefix : '/laravel-filemanager';
+                window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=900,height=600');
+                window.SetUrl = cb;
+            };
+
+            // Define LFM summernote button
+            var LFMButton = function(context) {
+                var ui = $.summernote.ui;
+                var button = ui.button({
+                    contents: '<i class="note-icon-picture"></i> ',
+                    tooltip: 'Insert image with filemanager',
+                    click: function() {
+
+                        lfm({type: 'image', prefix: '/laravel-filemanager'}, function(lfmItems, path) {
+                            lfmItems.forEach(function (lfmItem) {
+                                context.invoke('insertImage', lfmItem.url);
+                            });
+                        });
+
+                    }
+                });
+                return button.render();
+            };
+
+            // Initialize summernote with LFM button in the popover button group
+            // Please note that you can add this button to any other button group you'd like
+            $('#content').summernote({
+                toolbar: [
+                    ['popovers', ['lfm']],
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']]
+                ],
+                buttons: {
+                    lfm: LFMButton
+                },
+                height: 200
+            })
+        });
+    </script>
 
 @endsection

@@ -9,7 +9,7 @@ class Services extends Model
 {
 
     protected $table = 'services';
-    public $timestamps = false;
+    public $timestamps = true;
     protected $fillable = [
         'name',
         'category_id',

@@ -108,7 +108,8 @@
                 ],
                 buttons: {
                     lfm: LFMButton
-                }
+                },
+                height: 200
             })
         });
     </script>

@@ -15,7 +15,7 @@ class HomeController extends Controller
 {
     public function __construct()
     {
-        $cate = Category::all();
+        $cate = Category::orderBy('priority', 'ASC')->get();
         $serviceslist = Services::inRandomOrder()->limit(6)->get();
         View::share('cate',$cate);
         View::share('serviceslist',$serviceslist);
@@ -46,7 +46,7 @@ class HomeController extends Controller
 
     public function list($type_id)
     {
-        $news = News::where('type', $type_id)->paginate(6);
+        $news = News::where('type', $type_id)->orderBy('created_at', 'desc')->paginate(6);
         return view('giaodien.news', compact('news'))->with('i', (request()->input('page', 1) - 1) * 5);;
     }
 
@@ -58,7 +58,7 @@ class HomeController extends Controller
 
     public function servicesList($id)
     {
-        $services = Services::where('category_id', $id)->get();
+        $services = Services::where('category_id', $id)->orderBy('updated_at', 'ASC')->get();
         return view('giaodien.services_list', compact('services'));
     }
 
