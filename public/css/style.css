@@ -8162,15 +8162,14 @@ h1, h2, h3, h4, h5,
       outline: none !important; }
 
 .navbar-brand {
-  color: #fff;
+
   font-weight: 800;
   font-size: 22px;
   line-height: 1;
   margin-bottom: 0px; }
   .navbar-brand span {
     color: #f79f24; }
-  .navbar-brand:hover, .navbar-brand:focus {
-    color: #000000; }
+
 
 .social-media {
   display: inline-block; }

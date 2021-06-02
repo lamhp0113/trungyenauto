@@ -18,12 +18,10 @@
                 <div class="ftco-footer-widget mb-4 ml-md-5">
                     <h2 class="ftco-heading-2">Dịch vụ</h2>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="py-1 d-block"><span class="fa fa-check mr-3"></span>Oil Change</a></li>
-                        <li><a href="#" class="py-1 d-block"><span class="fa fa-check mr-3"></span>Batteries</a></li>
-                        <li><a href="#" class="py-1 d-block"><span class="fa fa-check mr-3"></span>Tow Truck</a></li>
-                        <li><a href="#" class="py-1 d-block"><span class="fa fa-check mr-3"></span>Tire Change</a></li>
-                        <li><a href="#" class="py-1 d-block"><span class="fa fa-check mr-3"></span>Engine Repair</a>
-                        </li>
+                        @foreach($serviceslist as $dv)
+                        <li><a href="#" class="py-1 d-block"><span class="fa fa-check mr-3"></span>{{$dv->name}}</a></li>
+                        @endforeach
+
                     </ul>
                 </div>
             </div>
@@ -39,7 +37,7 @@
                             </li>
                             <li><a href="#"><span class="icon fa fa-phone"></span><span
                                         class="text">0913578333</span></a></li>
-                            <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">trungyenauto@gmail.com</span></a>
+                            <li><a href="mailto:trungyenauto@gmail.com"><span class="icon fa fa-paper-plane"></span><span class="text">trungyenauto@gmail.com</span></a>
                             </li>
                         </ul>
                     </div>

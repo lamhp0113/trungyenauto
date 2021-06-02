@@ -4,9 +4,8 @@
             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                 <div class="full">
                     <div class="center-desk">
-                        <div class="logo">
-                            <img style="max-width: 100%;" src=" {{ asset('/images/logo.jpg') }}" alt="Trung Yên Auto | Trung Yên Garage"
-                                 itemprop="logo"/>
+                        <div class="col-md-3 d-flex align-items-center">
+                            <a class="navbar-brand" style="color:white" href="/">Trung Yên Auto</a>
                         </div>
                     </div>
                 </div>

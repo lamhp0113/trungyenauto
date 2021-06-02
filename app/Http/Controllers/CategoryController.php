@@ -8,7 +8,7 @@ class CategoryController extends Controller
 {
     public function list()
     {
-    	$cate=Category::all();
+    	$cate=Category::latest()->paginate(5);
     	return view('admin.category.list',compact('cate'));
     }
     public function displayCreateForm()

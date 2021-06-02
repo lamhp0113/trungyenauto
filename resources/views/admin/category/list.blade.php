@@ -45,10 +45,10 @@
                 </tr>
             @endforeach
             <tr>
-                <td colspan="5" class="text-center"></td>
             </tr>
             </tbody>
         </table>
+        {!! $cate->links('pagination::bootstrap-4') !!}
     </div>
 
 @endsection

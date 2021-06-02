@@ -18,7 +18,7 @@
                         <div class="text w-100">
                             <h2>Chúng tôi có đội ngũ kỹ thuật giàu kinh nghiệm</h2>
                             <h1 class="mb-4">Đã đến thời gian bảo dưỡng?</h1>
-                            <p><a href="#" class="btn btn-primary">Đặt lịch ngay</a></p>
+                            <p><a href="/#datlich" class="btn btn-primary">Đặt lịch ngay</a></p>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <div class="text w-100">
                             <h2>Chúng tôi quan tâm đến từng chi tiết nhỏ</h2>
                             <h1 class="mb-4">Tăng tuổi thọ của xe</h1>
-                            <p><a href="#datlich" class="btn btn-primary">Đặt lịch ngay</a></p>
+                            <p><a href="/#datlich" class="btn btn-primary">Đặt lịch ngay</a></p>
                         </div>
                     </div>
                 </div>
