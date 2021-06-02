@@ -14,8 +14,8 @@
                 <div class="row">
                     <div class="col d-flex ">
                         <div class="top-wrap d-flex">
-                            <div class="icon d-flex align-items-center justify-content-center"><span
-                                    class="fa fa-phone"></span></div>
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <a href="tel://0913578333"><span class="fa fa-phone"></span></a></div>
                             <div class="text"><span>Liên hệ chúng tôi</span><span>0913578333</span></div>
                         </div>
                     </div>

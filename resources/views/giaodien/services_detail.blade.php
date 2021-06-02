@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col-lg-8 ftco-animate">
             <h2 class="mb-3">{{$services->name}}</h2>
-            <p>{{$services->short_description}}</p>
+
             @if(!empty($services->images))
                 <p>
                     <img src="{{asset($news->images)}}" alt="" class="img-fluid">

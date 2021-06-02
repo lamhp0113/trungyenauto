@@ -32,7 +32,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Mô tả</label>
-                                <input class="form-control" required type="text"
+                                <input class="form-control" maxlength="255"  required type="text"
                                        value="{{$services->short_description}}" style="width:60%"
                                        name="short_description">
                             </div>

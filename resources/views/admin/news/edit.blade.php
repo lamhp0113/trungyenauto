@@ -38,7 +38,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Mô tả ngắn</label>
-                                <textarea name="short_description" class="form-control" rows="3"
+                                <textarea name="short_description"  class="form-control" rows="3"
                                           placeholder="Nhập ...">{{$news->short_description}}</textarea>
                             </div>
                             <div class="form-group">
