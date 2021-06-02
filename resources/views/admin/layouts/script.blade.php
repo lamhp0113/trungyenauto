@@ -31,3 +31,5 @@
   <script src="{{asset('dist/js/demo.js')}}"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
+  <script src="{{asset('http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.js')}}"></script>
+  <script src="{{asset('/vendor/laravel-filemanager/js/stand-alone-button.js')}}"></script>

@@ -56,7 +56,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 Route::group(['prefix' => 'admin'], function () {
     Route::resource("booking", BookingController::class);
 });
-
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
 Auth::routes(['register' => false]);
 Route::get('logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 

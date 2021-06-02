@@ -17,3 +17,6 @@
   <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker.css')}}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css')}}">
+  <link href="{{asset('http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.css')}}" rel="stylesheet">
+
+
