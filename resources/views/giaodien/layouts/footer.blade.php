@@ -35,7 +35,7 @@
                                 </span>
                                 <br/>
                             </li>
-                            <li><a href="#"><span class="icon fa fa-phone"></span><span
+                            <li><a href="tel://0913578333"><span class="icon fa fa-phone"></span><span
                                         class="text">0913578333</span></a></li>
                             <li><a href="mailto:trungyenauto@gmail.com"><span class="icon fa fa-paper-plane"></span><span class="text">trungyenauto@gmail.com</span></a>
                             </li>
