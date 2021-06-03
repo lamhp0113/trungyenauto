@@ -39,7 +39,7 @@
                                 </div>
                                 <div class="text pl-3">
                                     <p><span>Hòm Thư:</span> <a
-                                            href="mailto:info@yoursite.com">trungyenauto@gmail.com</a></p>
+                                            href="mailto:trungyenauto@gmail.com">trungyenauto@gmail.com</a></p>
                                 </div>
                             </div>
                             <div class="dbox w-100 d-flex align-items-center">

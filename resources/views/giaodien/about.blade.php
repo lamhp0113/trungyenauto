@@ -42,7 +42,7 @@
                             khẩu, giúp khắc phục được tất cả những chứng bệnh từ đơn giản đến phức tạp mà các dòng xe
                             này thường gặp phải.</p>
                         </p>
-                        <img src="images/oto.png" alt="">
+                        <img src="{{asset('images/oto.png')}}" alt="">
                         <div class="tabulation-2 mt-4">
                             <div class="tab-content rounded mt-2">
                                 <div class="tab-pane container p-0 active">

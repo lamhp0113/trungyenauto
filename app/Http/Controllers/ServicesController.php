@@ -19,6 +19,13 @@ class ServicesController extends Controller
 
 
     }
+    public function search(){
+        $inputName =$_GET['keyword'];
+        $services=DB::table('services')->leftJoin('category', 'services.category_id', '=', 'category.id')
+        ->where('services.name','LIKE','%'.$inputName.'%')->paginate(5, array('services.*','category.name as category_name'));
+        return view('admin.services.list', compact('services'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
     public function create()
     {
         $category= Category::orderBy('priority')->get();

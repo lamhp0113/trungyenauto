@@ -29,6 +29,7 @@ Route::get('services/{id}', [HomeController::class, 'servicesList']);
 Route::get('services_detail/{id}', [HomeController::class, 'servicesDetail']);
 
 
+
 Route::get('admin', function () {
     return redirect()->route('booking.index');
 });
@@ -48,6 +49,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('update-services/{id}', [ServicesController::class, 'displayUpdateForm']);
     Route::post('update-services/{id}', [ServicesController::class, 'doUpdate']);
     Route::get('services/{id}', [ServicesController::class, 'getXoa']);
+    Route::get('search',[ServicesController::class,'search']);
 // tin tuc
     Route::get('/admin', [HomeController::class, 'index'])->name('home');
 //});
@@ -56,7 +58,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 Route::group(['prefix' => 'admin'], function () {
     Route::resource("booking", BookingController::class);
 });
-
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
 Auth::routes(['register' => false]);
 Route::get('logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 

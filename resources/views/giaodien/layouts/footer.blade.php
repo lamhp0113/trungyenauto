@@ -19,7 +19,7 @@
                     <h2 class="ftco-heading-2">Dịch vụ</h2>
                     <ul class="list-unstyled">
                         @foreach($serviceslist as $dv)
-                        <li><a href="#" class="py-1 d-block"><span class="fa fa-check mr-3"></span>{{$dv->name}}</a></li>
+                        <li><a href="/services_detail/{{$dv->id}}" class="py-1 d-block"><span class="fa fa-check mr-3"></span>{{$dv->name}}</a></li>
                         @endforeach
 
                     </ul>
@@ -35,7 +35,7 @@
                                 </span>
                                 <br/>
                             </li>
-                            <li><a href="#"><span class="icon fa fa-phone"></span><span
+                            <li><a href="tel://0913578333"><span class="icon fa fa-phone"></span><span
                                         class="text">0913578333</span></a></li>
                             <li><a href="mailto:trungyenauto@gmail.com"><span class="icon fa fa-paper-plane"></span><span class="text">trungyenauto@gmail.com</span></a>
                             </li>

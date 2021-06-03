@@ -30,9 +30,7 @@ class NewsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'short_description' => 'required',
-            'content' => 'required'
+            'title' => 'required'
         ]);
         if($request->hasFile('myFile'))
         {
