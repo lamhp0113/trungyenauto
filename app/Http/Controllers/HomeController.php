@@ -41,7 +41,8 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('giaodien.about');
+        $news = News::where('type',2)->first();
+        return view('giaodien.about',compact('news'));
     }
 
     public function list($type_id)

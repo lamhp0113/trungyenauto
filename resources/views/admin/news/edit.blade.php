@@ -19,37 +19,47 @@
                             </ul>
                         </div>
                     @endif
-                    <form action="{{ route('news.update', $news->id) }}" method="POST"  enctype="multipart/form-data">
+                    <form action="{{ route('news.update', $news->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="card-body">
                             <div class="form-group" style="width: 50%">
                                 <label>Loại tin</label>
-                                <select class="form-control" name="type">
-                                    <option value="0">Tin thông thường
+                                <select class="form-control" name="type"
+                                        @if (2 == old('status', $news->type)) disabled @endif>
+                                    <option value="0" @if (0 == old('status', $news->type)) selected="selected" @endif>
+                                        Tin thông thường
                                     </option>
-                                    <option value="1">Tin khuyến mãi
+                                    <option value="1" @if (1 == old('status', $news->type)) selected="selected" @endif>
+                                        Tin khuyến mãi
+                                    </option>
+                                    <option value="2" @if (2 == old('status', $news->type)) selected="selected" @endif>
+                                        Trang giới thiệu
                                     </option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label>Tiêu đề </label>
-                                <input class="form-control" name="title" value="{{$news->title}}"/>
-                            </div>
-                            <div class="form-group">
-                                <label>Mô tả ngắn</label>
-                                <textarea name="short_description"  class="form-control" rows="3"
-                                          placeholder="Nhập ...">{{$news->short_description}}</textarea>
-                            </div>
+
+                            @if (2 != old('status', $news->type))
+                                <div class="form-group">
+                                    <label>Tiêu đề </label>
+                                    <input class="form-control" name="title" value="{{$news->title}}"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Hình ảnh</label>
+                                    <input class="form-control" type="file" name="myFile" value="{{$news->image}}"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Mô tả ngắn</label>
+                                    <textarea name="short_description" class="form-control" rows="3"
+                                              placeholder="Nhập ...">{{$news->short_description}}</textarea>
+                                </div>
+                            @endif
                             <div class="form-group">
                                 <label>Nội dung</label>
-                                <textarea class="form-control" rows="6" id="content" name="content">{{$news->content}}</textarea>
-                            </div>
-
-
-                            <div class="form-group">
-                                <label>Hình ảnh</label>
-                                <input class="form-control" type="file" name="myFile" value="{{$news->image}}"/>
+                                <textarea class="form-control" rows="6" id="content"
+                                          name="content">{{$news->content}}</textarea>
                             </div>
                         </div>
                         <!-- /.card-body -->
@@ -65,25 +75,22 @@
 
     <script>
         $('#lfm').filemanager('image');
-
-        $(document).ready(function(){
-
+        $(document).ready(function () {
             // Define function to open filemanager window
-            var lfm = function(options, cb) {
+            var lfm = function (options, cb) {
                 var route_prefix = (options && options.prefix) ? options.prefix : '/laravel-filemanager';
                 window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=900,height=600');
                 window.SetUrl = cb;
             };
 
-            // Define LFM summernote button
-            var LFMButton = function(context) {
+            var LFMButton = function (context) {
                 var ui = $.summernote.ui;
                 var button = ui.button({
                     contents: '<i class="note-icon-picture"></i> ',
-                    tooltip: 'Insert image with filemanager',
-                    click: function() {
+                    tooltip: 'Chèn ảnh vào nội dung',
+                    click: function () {
 
-                        lfm({type: 'image', prefix: '/laravel-filemanager'}, function(lfmItems, path) {
+                        lfm({type: 'image', prefix: '/laravel-filemanager'}, function (lfmItems, path) {
                             lfmItems.forEach(function (lfmItem) {
                                 context.invoke('insertImage', lfmItem.url);
                             });
@@ -94,8 +101,6 @@
                 return button.render();
             };
 
-            // Initialize summernote with LFM button in the popover button group
-            // Please note that you can add this button to any other button group you'd like
             $('#content').summernote({
                 toolbar: [
                     ['popovers', ['lfm']],
@@ -109,7 +114,7 @@
                 buttons: {
                     lfm: LFMButton
                 },
-                height: 200
+                height: 250
             })
         });
     </script>

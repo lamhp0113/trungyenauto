@@ -24,7 +24,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Tên dịch vụ </label>
-                                <input class="form-control"  value="{{$booking->service_name?$ct->service_name:'dịch vụ khác'}}" disabled
+                                <input class="form-control"  value="{{$booking->service_name?$booking->service_name:'dịch vụ khác'}}" disabled
                                 />
                             </div>
                             <div class="form-group">
