@@ -4,8 +4,7 @@
     $mappingStatus = [
         0 => 'Tin tức thông thường',
         1 => 'Tin khuyến mãi',
-        2 => 'Trang liên hệ',
-        3 => 'Trang giới thiệu công ty'
+        2 => 'Trang giới thiệu công ty'
     ];
     ?>
     <div class="row">
@@ -53,10 +52,12 @@
                                     </a>
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" title="delete"
-                                            style="border: none; background-color:transparent;">
-                                        <i class="fas fa-trash fa-lg text-danger"></i>
-                                    </button>
+                                    @if($ct->type!=2)
+                                        <button type="submit" title="delete"
+                                                style="border: none; background-color:transparent;">
+                                            <i class="fas fa-trash fa-lg text-danger"></i>
+                                        </button>
+                                    @endif
                                 </form>
                             </td>
                         </tr>

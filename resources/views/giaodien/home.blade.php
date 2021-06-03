@@ -53,18 +53,19 @@
         <div class="row">
 
             @foreach( $serviceslist as $sv)
-            <div class="col-md-4 services ftco-animate">
-                <div class="d-block d-flex">
-                    <div class="icon d-flex justify-content-center align-items-center">
-                        <span class="flaticon-car-service"></span>
-                    </div>
-                    <div class="media-body pl-3">
-                        <a href="#"><h3 class="heading">{{$sv->name}}</h3></a>
-                        <p>{{$sv->short_description}}</p>
-                        <p><a href="/services_detail/{{$sv->id}}" class="btn-custom">Đọc thêm</a></p>
+                <div class="col-md-4 services ftco-animate">
+                    <div class="d-block d-flex">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <span class="flaticon-car-service"></span>
+                        </div>
+                        <div class="media-body pl-3">
+                            <a href="/services_detail/{{$sv->id}}"><h3 class="heading">{{$sv->name}}</h3></a>
+                            <p style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp:2;-webkit-box-orient: vertical;">
+                                {{$sv->short_description}}</p>
+                            <p><a href="/services_detail/{{$sv->id}}" class="btn-custom">Đọc thêm</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
             @endforeach
         </div>
     </div>
