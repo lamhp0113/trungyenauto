@@ -27,7 +27,7 @@
                     </div>
                     <div class="media-body pl-3">
                         <a href="#"><h3 class="heading">{{$sv->name}}</h3></a>
-                        <p>{{$sv->short_description}}.</p>
+                        <p style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp:2;-webkit-box-orient: vertical;">{{$sv->short_description}}.</p>
                         <p><a href="/services_detail/{{$sv->id}}" class="btn-custom">Đọc thêm</a></p>
                     </div>
                 </div>

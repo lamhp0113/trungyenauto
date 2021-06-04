@@ -44,7 +44,8 @@
 
                             <div class="form-group">
                                 <label>Nội dung</label>
-                                <textarea class="form-control" rows="6" id="content" name="content">{!! old('content',) !!}</textarea>
+                                <textarea class="form-control" rows="6" id="content"
+                                          name="content">{!! old('content',) !!}</textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -66,24 +67,24 @@
     <script>
         $('#lfm').filemanager('image');
 
-        $(document).ready(function(){
+        $(document).ready(function () {
 
             // Define function to open filemanager window
-            var lfm = function(options, cb) {
+            var lfm = function (options, cb) {
                 var route_prefix = (options && options.prefix) ? options.prefix : '/laravel-filemanager';
                 window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=900,height=600');
                 window.SetUrl = cb;
             };
 
             // Define LFM summernote button
-            var LFMButton = function(context) {
+            var LFMButton = function (context) {
                 var ui = $.summernote.ui;
                 var button = ui.button({
                     contents: '<i class="note-icon-picture"></i> ',
                     tooltip: 'Insert image with filemanager',
-                    click: function() {
+                    click: function () {
 
-                        lfm({type: 'image', prefix: '/laravel-filemanager'}, function(lfmItems, path) {
+                        lfm({type: 'image', prefix: '/laravel-filemanager'}, function (lfmItems, path) {
                             lfmItems.forEach(function (lfmItem) {
                                 context.invoke('insertImage', lfmItem.url);
                             });
@@ -104,7 +105,9 @@
                     ['fontsize', ['fontsize']],
                     ['color', ['color']],
                     ['para', ['ul', 'ol', 'paragraph']],
-                    ['height', ['height']]
+                    ['height', ['height']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['fullscreen', 'codeview', 'help']],
                 ],
                 buttons: {
                     lfm: LFMButton

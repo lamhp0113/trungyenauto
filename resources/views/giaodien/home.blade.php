@@ -71,36 +71,7 @@
     </div>
 </section>
 @include('giaodien.layouts.booking')
-{{--<section class="ftco-section bg-light">--}}
-{{--    <div class="container">--}}
-{{--        <div class="row justify-content-center pb-5 mb-3">--}}
-{{--            <div class="col-md-7 heading-section text-center ftco-animate">--}}
 
-{{--                <h2>Tin tức</h2>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        <div class="row">--}}
-{{--            @foreach($news as $tin)--}}
-{{--            <div class="col-md-6 col-lg-3 ftco-animate">--}}
-{{--                <div class="block-7">--}}
-{{--                    <div class="text-center">--}}
-{{--                        <span class="excerpt d-block">{{$tin->title}}</span>--}}
-{{--                        <span class="price"><sup></sup> <a href="/contact"><span class="number">Liên hệ</span></a></span>--}}
-
-{{--                        <div class="pricing-text">--}}
-{{--                            <p>{{$tin->short_description}}</p>--}}
-{{--                        </div>--}}
-
-{{--                        <a href="/news_detail/{{$tin->id}}" class="btn btn-secondary d-block px-2 py-3">Xem chi tiết</a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            @endforeach--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</section>--}}
-
-<!-- footer -->
 @include('giaodien.layouts.footer')
 @include('giaodien.layouts.script')
 </body>
