@@ -5,7 +5,8 @@
         <div class="row d-md-flex justify-content-end">
             <div class="col-md-12 col-lg-6 half p-3 py-5 pl-lg-5 ftco-animate heading-section heading-section-white">
                 <span class="subheading" style="font-size:18px">Đặt lịch bảo dưỡng và sửa chữa</span>
-                <h2 class="mb-4">Miễn phí tư vấn hotline: <a href="tel://0913578333" style="color:black">0913578333</a></h2>
+
+            <span class="subheading" style="font-size:18px"> Miễn phí tư vấn hotline:<a href="tel://0913578333" style="color:black;font-size:28px">0913578333</a></span>
                 <form action="{{ route('booking.store') }}" method="POST" class="appointment">
                     @csrf
                     <input type="hidden" name="status"  value="0" />
