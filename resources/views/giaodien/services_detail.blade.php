@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Auto Repair - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     @include('giaodien.layouts.style')
-
 </head>
 <body>
 @include('giaodien.layouts.main-header')
@@ -28,7 +24,6 @@
             <div class="sidebar-box ftco-animate">
                 <div class="categories">
                     <h3>Dịch vụ khác</h3>
-
                     @foreach($serviceslist as $sv)
                     <li><a href="/services_detail/{{$sv->id}}">{{$sv->name}} <span class="fa fa-chevron-right"></span></a></li>
                     @endforeach
