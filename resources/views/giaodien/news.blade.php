@@ -13,7 +13,7 @@
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
                         <a href="/news_detail/{{$tt->id}}" class="block-20 rounded"
-                           style="background-image: url({{asset($tt->image?$tt->image:'images/no_image.jpg')}}) ;width:200px">
+                           style="background-image: url({{asset($tt->image?$tt->image:'images/no_image.jpg')}})">
                         </a>
                         <div class="text mt-3">
                             <div class="posted mb-3 d-flex">
@@ -24,7 +24,7 @@
                                     <span>{{$tt->created_at}}</span>
                                 </div>
                             </div>
-                            <h3 class="heading" style="overflow: hidden;width:200px;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp:2;-webkit-box-orient: vertical;"><a href="/news_detail/{{$tt->id}}">{{$tt->title}}</a></h3>
+                            <h3 class="heading" style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp:2;-webkit-box-orient: vertical;"><a href="/news_detail/{{$tt->id}}">{{$tt->title}}</a></h3>
                         </div>
                     </div>
                 </div>
