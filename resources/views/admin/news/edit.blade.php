@@ -49,12 +49,11 @@
                                     <label>Hình ảnh</label>
                                     <input class="form-control" type="file" name="myFile" value="{{$news->image}}"/>
                                 </div>
-
-                                <div class="form-group">
-                                    <label>Mô tả ngắn</label>
-                                    <textarea name="short_description" class="form-control" rows="3"
-                                              placeholder="Nhập ...">{{$news->short_description}}</textarea>
-                                </div>
+{{--                                <div class="form-group">--}}
+{{--                                    <label>Mô tả ngắn</label>--}}
+{{--                                    <textarea name="short_description" class="form-control" rows="3"--}}
+{{--                                              placeholder="Nhập ...">{{$news->short_description}}</textarea>--}}
+{{--                                </div>--}}
                             @endif
                             <div class="form-group">
                                 <label>Nội dung</label>

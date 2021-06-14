@@ -65,8 +65,9 @@ class HomeController extends Controller
 
     public function servicesDetail($id)
     {
-        $services = Services::find($id);
-        return view('giaodien.services_detail', compact('services'));
+        $services=Services::all();
+        $service = Services::find($id);
+        return view('giaodien.services_detail', compact('service','services'));
     }
 
     public function index()
